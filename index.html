@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Rohan Darji — Designer &amp; Developer</title>
   <meta name="description" content="Portfolio of Rohan Darji (रोहन दर्जी), Designer & Developer based in Mumbai. Designing and building fast, thoughtful web products and enterprise platforms for Charles Schwab, MetLife, The Hartford, Capgemini, and Infosys.">
   
@@ -1308,64 +1308,119 @@
     }
 
     /* ==========================================================================
-       RESPONSIVE DESIGN (DESKTOP, LAPTOP, TABLETS / IPAD, MOBILE)
+       RESPONSIVE DESIGN SYSTEM (DESKTOP, LAPTOPS, TABLETS, FOLDABLES, MOBILE)
        ========================================================================== */
-    /* 1. LAPTOP & SMALL DESKTOP (<= 1024px) */
-    @media (max-width: 1024px) {
+
+    /* 1. LARGE DESKTOP & 4K MONITORS (>= 1440px) */
+    @media (min-width: 1440px) {
       .container {
-        padding: 0 24px;
+        max-width: 1280px;
       }
-      .enterprise-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 14px;
+      .hero-intro-content {
+        max-width: 600px;
       }
-      .framer-page-card {
-        flex: 0 0 clamp(580px, 70vw, 760px);
+      .hero-name {
+        font-size: clamp(3.8rem, 4.4vw, 4.5rem);
       }
-      .contact-card {
-        padding: 36px 32px;
+      .hero-bio-stack {
+        font-size: 1.08rem;
+        line-height: 1.68;
       }
     }
 
-    /* 2. TABLETS & IPAD PORTRAIT (<= 860px) */
-    @media (max-width: 860px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
+    /* 2. STANDARD LAPTOPS (1025px - 1280px: MacBook Air/Pro 13"/14", Dell XPS) */
+    @media (max-width: 1280px) {
+      .hero-section {
+        padding: clamp(80px, 12vh, 110px) 0 clamp(40px, 6vh, 60px);
+        min-height: clamp(500px, 84vh, 720px);
       }
-      .hero-circle-wrapper {
+      .hero-intro-content {
+        max-width: min(530px, 47vw);
+      }
+      .hero-name {
+        font-size: clamp(2.8rem, 4.6vw, 3.8rem);
+      }
+      .framer-page-card {
+        flex: 0 0 clamp(580px, 62vw, 720px);
+      }
+      .enterprise-card {
+        width: 200px;
+        height: 84px;
+      }
+    }
+
+    /* 3. SMALL LAPTOPS & TABLETS LANDSCAPE (861px - 1024px: iPad Pro, Surface) */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 0 clamp(20px, 3.5vw, 32px);
+      }
+      .header-outer {
+        padding: 0 clamp(16px, 3vw, 24px);
+      }
+      .nav-island {
+        gap: 16px;
+        padding: 6px 10px 6px 16px;
+      }
+      .nav-links {
+        gap: 14px;
+        font-size: 0.82rem;
+      }
+      .hero-section {
+        min-height: clamp(480px, 80vh, 680px);
+        padding: 95px 0 45px;
+      }
+      .hero-intro-content {
+        max-width: min(490px, 48vw);
+      }
+      .hero-name {
+        font-size: clamp(2.6rem, 4.5vw, 3.4rem);
+      }
+      .framer-page-card {
+        flex: 0 0 clamp(520px, 68vw, 660px);
+      }
+      .framer-card-media {
         height: 360px;
+      }
+      .enterprise-card {
+        width: 190px;
+        height: 80px;
+      }
+      .contact-card {
+        padding: 34px 28px;
+      }
+    }
+
+    /* 4. TABLETS PORTRAIT & UNFOLDED FOLDABLES (<= 860px: iPad Mini, iPad Air, Galaxy Z Fold inner) */
+    @media (max-width: 860px) {
+      .hero-section {
+        min-height: auto;
+        padding: 105px 0 50px;
+        display: block;
+      }
+      .hero-grid {
+        display: block;
+      }
+      .hero-intro-content {
         max-width: 100%;
-        margin: 0 auto;
+      }
+      .hero-name {
+        font-size: clamp(2.6rem, 6.8vw, 3.6rem);
+      }
+      .hero-subname {
+        font-size: 1.45rem;
+        margin-bottom: 20px;
       }
       .section-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-        margin-bottom: 32px;
+        margin-bottom: 30px;
       }
       .section-subtitle {
         text-align: left;
       }
       .framer-page-card {
-        flex: 0 0 84vw;
-      }
-      .emails-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .contact-head {
-        margin-bottom: 24px;
-      }
-      .contact-card {
-        padding: 32px 24px;
-      }
-    }
-
-    /* 3. MOBILE & SMALL TABLETS (<= 768px) */
-    @media (max-width: 768px) {
-      .framer-page-card {
-        flex: 0 0 88vw;
+        flex: 0 0 82vw;
       }
       .framer-card-media {
         height: 320px;
@@ -1376,74 +1431,122 @@
       .framer-drag-hint {
         display: none;
       }
-      .enterprise-marquee {
-        padding: 12px 0 20px;
+      .emails-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
-      .enterprise-card {
-        width: 185px;
-        height: 78px;
-        padding: 12px 16px;
-        border-radius: 13px;
+      .contact-head {
+        margin-bottom: 24px;
       }
-      .capgemini-logo {
-        max-height: 25px;
-        max-width: 115px;
-      }
-      .infosys-logo {
-        max-height: 21px;
-        max-width: 95px;
-      }
-      .enterprise-brand-lockup .schwab-icon {
-        width: 24px;
-        height: 24px;
-      }
-      .enterprise-brand-lockup .brand-name {
-        font-size: 0.84rem;
-      }
-      .metlife-logo {
-        max-height: 23px;
-        max-width: 100px;
-      }
-      .hartford-logo {
-        max-height: 36px;
-        max-width: 95px;
-      }
-      .contact-bar {
-        padding-top: 20px;
+      .contact-card {
+        padding: 30px 22px;
       }
     }
 
-    /* 4. MOBILE SCREENS (<= 640px) */
+    /* 5. UNFOLDED FOLDABLE PHONES - SQUARISH ASPECT RATIO (Aspect Ratio ~4:5 to 5:4) */
+    @media (min-width: 540px) and (max-width: 920px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+      .hero-section {
+        padding: 95px 0 40px;
+      }
+      .hero-name {
+        font-size: clamp(2.4rem, 5.5vw, 3.2rem);
+      }
+      .framer-card-media {
+        height: 290px;
+      }
+      .framer-page-card {
+        flex: 0 0 76vw;
+      }
+      .enterprise-card {
+        width: 175px;
+        height: 74px;
+      }
+    }
+
+    /* 6. STANDARD TABLETS & PHONES (<= 768px) */
+    @media (max-width: 768px) {
+      .framer-page-card {
+        flex: 0 0 86vw;
+      }
+      .enterprise-marquee {
+        padding: 12px 0 18px;
+      }
+      .enterprise-card {
+        width: 175px;
+        height: 75px;
+        padding: 10px 14px;
+      }
+      .capgemini-logo {
+        max-height: 23px;
+        max-width: 105px;
+      }
+      .infosys-logo {
+        max-height: 19px;
+        max-width: 88px;
+      }
+      .metlife-logo {
+        max-height: 21px;
+        max-width: 92px;
+      }
+      .hartford-logo {
+        max-height: 32px;
+        max-width: 88px;
+      }
+    }
+
+    /* 7. MOBILE PHONES (<= 640px: iPhone 13/14/15/16, Samsung Galaxy S22/S23/S24, Google Pixel) */
     @media (max-width: 640px) {
       .header-outer {
-        top: 10px;
+        top: max(10px, env(safe-area-inset-top));
         padding: 0 12px;
       }
       .nav-island {
         gap: 12px;
         padding: 6px 12px 6px 16px;
         width: 100%;
-        max-width: 380px;
+        max-width: 420px;
         justify-content: space-between;
       }
       .nav-links {
         display: none;
       }
+      .nav-brand {
+        font-size: 0.86rem;
+      }
+      .nav-cta-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+      }
+      .hero-section {
+        padding: 85px 0 35px;
+      }
       .hero-name {
-        font-size: clamp(2.2rem, 8vw, 2.9rem);
+        font-size: clamp(2.15rem, 8.5vw, 2.9rem);
+        word-break: break-word;
       }
       .hero-subname {
-        font-size: 1.35rem;
-        margin-bottom: 20px;
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+      }
+      .hero-role {
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+      }
+      .hero-bio-stack {
+        font-size: 0.94rem;
+        line-height: 1.62;
       }
       .hero-actions {
+        display: flex;
         flex-direction: column;
         width: 100%;
         gap: 10px;
       }
       .hero-actions .btn {
         width: 100%;
+        min-height: 48px;
         justify-content: center;
+        font-size: 0.92rem;
       }
       .framer-canvas-header {
         flex-direction: column;
@@ -1457,12 +1560,16 @@
       .framer-external-link {
         width: 100%;
         justify-content: center;
+        min-height: 44px;
+      }
+      .framer-page-card {
+        flex: 0 0 88vw;
       }
       .framer-card-media {
-        height: 260px;
+        height: 250px;
       }
       .framer-card-caption {
-        padding: 14px 14px 10px;
+        padding: 12px 14px;
         flex-direction: column;
         align-items: flex-start;
         gap: 6px;
@@ -1479,29 +1586,39 @@
       }
       .contact-card {
         padding: 24px 18px;
-        border-radius: 18px;
-      }
-      .contact-kicker {
-        font-size: 0.68rem;
-        padding: 3px 8px;
+        border-radius: 20px;
       }
       .contact-head h2 {
-        font-size: 1.85rem;
+        font-size: clamp(1.7rem, 6.5vw, 2.1rem);
+        line-height: 1.15;
       }
       .contact-head p {
-        font-size: 0.92rem;
+        font-size: 0.9rem;
       }
       .email-item {
-        padding: 14px 16px;
+        padding: 13px 15px;
+        min-height: 52px;
       }
       .email-val {
         font-size: 0.86rem;
         word-break: break-all;
       }
+      .copy-btn {
+        min-width: 44px;
+        min-height: 44px;
+      }
       .contact-bar {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
+        padding-top: 18px;
+      }
+      .phone-item {
+        min-height: 44px;
+        font-size: 0.86rem;
+      }
+      .footer-section {
+        padding-bottom: max(24px, env(safe-area-inset-bottom));
       }
       .footer-note {
         flex-direction: column;
@@ -1512,22 +1629,127 @@
       }
     }
 
-    /* 5. ULTRA-COMPACT PHONES (<= 380px) */
-    @media (max-width: 380px) {
+    /* 8. COMPACT PHONES (<= 420px: iPhone SE, iPhone 13 mini) */
+    @media (max-width: 420px) {
+      .hero-name {
+        font-size: clamp(2.0rem, 8.8vw, 2.5rem);
+      }
+      .hero-subname {
+        font-size: 1.22rem;
+      }
       .enterprise-card {
-        width: 165px;
-        height: 72px;
-        padding: 10px 14px;
+        width: 155px;
+        height: 68px;
+        padding: 8px 12px;
+      }
+      .framer-card-media {
+        height: 220px;
       }
       .contact-card {
-        padding: 18px 12px;
-      }
-      .copy-btn {
-        width: 34px;
-        height: 34px;
+        padding: 20px 14px;
       }
       .contact-head h2 {
-        font-size: 1.65rem;
+        font-size: 1.62rem;
+      }
+      .framer-chip-btn {
+        padding: 6px 10px;
+        font-size: 0.72rem;
+      }
+    }
+
+    /* 9. ULTRA-NARROW FOLDABLE PHONE COVER SCREENS (<= 330px: Galaxy Z Fold 1-6 cover screens ~280-320px) */
+    @media (max-width: 330px) {
+      .container {
+        padding: 0 10px;
+      }
+      .header-outer {
+        padding: 0 6px;
+      }
+      .nav-island {
+        padding: 4px 8px 4px 10px;
+        gap: 6px;
+        max-width: 100%;
+      }
+      .nav-brand {
+        font-size: 0.76rem;
+      }
+      .nav-brand-dot {
+        width: 6px;
+        height: 6px;
+      }
+      .nav-cta-btn {
+        padding: 5px 10px;
+        font-size: 0.72rem;
+      }
+      .hero-section {
+        padding: 75px 0 28px;
+      }
+      .hero-name {
+        font-size: 1.8rem;
+        letter-spacing: -0.03em;
+      }
+      .hero-subname {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+      }
+      .hero-role {
+        font-size: 0.98rem;
+      }
+      .hero-bio-stack {
+        font-size: 0.86rem;
+        line-height: 1.52;
+      }
+      .hero-actions .btn {
+        padding: 10px 14px;
+        font-size: 0.82rem;
+        min-height: 44px;
+      }
+      .enterprise-card {
+        width: 135px;
+        height: 60px;
+        padding: 6px 10px;
+      }
+      .framer-page-card {
+        flex: 0 0 94vw;
+      }
+      .framer-card-media {
+        height: 180px;
+      }
+      .framer-card-topbar {
+        padding: 8px 10px;
+      }
+      .framer-card-label {
+        font-size: 0.68rem;
+      }
+      .framer-page-chips {
+        gap: 4px;
+      }
+      .framer-chip-btn {
+        padding: 5px 8px;
+        font-size: 0.68rem;
+      }
+      .contact-card {
+        padding: 16px 10px;
+      }
+      .contact-head h2 {
+        font-size: 1.45rem;
+      }
+      .email-item {
+        padding: 10px 12px;
+      }
+      .email-type {
+        font-size: 0.68rem;
+      }
+      .email-val {
+        font-size: 0.78rem;
+        word-break: break-all;
+      }
+      .copy-btn {
+        width: 36px;
+        height: 36px;
+      }
+      .stat-line {
+        font-size: 0.74rem;
       }
     }
 
@@ -2384,17 +2606,29 @@
       group.add(points);
       scene.add(group);
 
-      // Position sphere on right half of screen on desktop, centered on mobile
+      // Device-adaptive 3D positioning: laptops, tablets, foldables, and mobile
       function updateSpherePosition() {
         const aspect = width / height;
-        if (width >= 860) {
-          // Positioned clearly on the right half with a generous gutter so it never overlaps the bio text
+        if (width >= 1280) {
+          // Wide desktop & large monitors: positioned clearly on the right with generous gutter
           group.position.set(aspect * 2.15, 0.05, 0);
           camera.position.set(0, 0, 9.6);
+        } else if (width >= 900 && aspect > 1.15) {
+          // Standard laptops (13"-15" MacBook Air, Dell XPS, Lenovo)
+          group.position.set(aspect * 1.95, 0.02, 0);
+          camera.position.set(0, 0, 10.0);
+        } else if (width >= 600 && aspect > 0.95) {
+          // Unfolded foldable phones & squarish tablets (Galaxy Z Fold, Pixel Fold, iPad Mini)
+          group.position.set(aspect * 1.15, -0.35, 0);
+          camera.position.set(0, 0, 10.8);
+        } else if (width >= 360) {
+          // Standard mobile phones
+          group.position.set(0, -0.65, 0);
+          camera.position.set(0, 0, 11.6);
         } else {
-          // Centered on smaller screens / mobile
-          group.position.set(0, -0.6, 0);
-          camera.position.set(0, 0, 11.5);
+          // Ultra-narrow folded cover screens (Galaxy Fold cover ~280-320px)
+          group.position.set(0, -0.55, 0);
+          camera.position.set(0, 0, 12.6);
         }
       }
       updateSpherePosition();
@@ -2511,7 +2745,10 @@
         updateSpherePosition();
       }
 
-      window.addEventListener('resize', onResize);
+      window.addEventListener('resize', onResize, { passive: true });
+      window.addEventListener('orientationchange', () => {
+        setTimeout(onResize, 150);
+      }, { passive: true });
     })();
 
     // --------------------------------------------------------------------------
