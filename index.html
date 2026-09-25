@@ -1086,227 +1086,6 @@
       color: var(--dark-text-muted) !important;
     }
 
-    .contact-section {
-      padding: 24px 0 48px;
-      border-top: 1px solid var(--border);
-      background: var(--bg-surface);
-    }
-
-    .contact-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: clamp(28px, 4vw, 44px);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-head {
-      max-width: 680px;
-      margin-bottom: 30px;
-    }
-
-    .contact-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent);
-      background: rgba(180, 83, 9, 0.07);
-      border: 1px solid rgba(180, 83, 9, 0.16);
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-bottom: 14px;
-    }
-
-    .contact-kicker-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 6px var(--green);
-    }
-
-    .contact-head h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 3.8vw, 3.2rem);
-      font-weight: 400;
-      line-height: 1.12;
-      letter-spacing: -0.015em;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
-    .contact-head p {
-      font-size: clamp(0.96rem, 1.3vw, 1.06rem);
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    .emails-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 36px;
-    }
-
-    .email-item {
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      transition: all 0.2s ease;
-    }
-
-    .email-item:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-    }
-
-    .email-info {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      min-width: 0;
-    }
-
-    .email-type {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-dim);
-    }
-
-    .email-val {
-      font-family: var(--font-mono);
-      font-size: 0.94rem;
-      font-weight: 500;
-      color: var(--text);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .copy-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.15s ease;
-    }
-
-    .copy-btn:hover {
-      background: var(--text);
-      color: #ffffff;
-      border-color: var(--text);
-    }
-
-    .contact-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding-top: 28px;
-      border-top: 1px solid var(--border);
-    }
-
-    .phone-item {
-      font-family: var(--font-mono);
-      font-size: 0.92rem;
-      color: var(--text);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.15s ease;
-    }
-
-    .phone-item:hover {
-      color: var(--accent);
-    }
-
-    .clock-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .footer-note {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 0;
-      font-size: 0.78rem;
-      font-family: var(--font-mono);
-      color: var(--text-dim);
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .footer-email-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--accent-light);
-      text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      transition: all 0.2s ease;
-    }
-
-    .footer-email-link:hover {
-      color: #ffffff;
-      text-decoration: underline;
-      transform: translateY(-1px);
-    }
-
-    /* TOAST NOTIFICATION */
-    .toast-box {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: #111827;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 10px 18px;
-      border-radius: 10px;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-      transform: translateY(100px);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-      z-index: 999;
-    }
-
-    .toast-box.active {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
     /* ==========================================================================
        RESPONSIVE DESIGN SYSTEM (DESKTOP, LAPTOPS, TABLETS, FOLDABLES, MOBILE)
        ========================================================================== */
@@ -1317,10 +1096,10 @@
         max-width: 1280px;
       }
       .hero-intro-content {
-        max-width: 600px;
+        max-width: 580px;
       }
       .hero-name {
-        font-size: clamp(3.8rem, 4.4vw, 4.5rem);
+        font-size: clamp(3.6rem, 4.4vw, 4.5rem);
       }
       .hero-bio-stack {
         font-size: 1.08rem;
@@ -1328,17 +1107,17 @@
       }
     }
 
-    /* 2. STANDARD LAPTOPS (1025px - 1280px: MacBook Air/Pro 13"/14", Dell XPS) */
+    /* 2. STANDARD LAPTOPS (1025px - 1439px: MacBook Air/Pro 13"/14", Dell XPS, ThinkPad) */
     @media (max-width: 1280px) {
       .hero-section {
-        padding: clamp(80px, 12vh, 110px) 0 clamp(40px, 6vh, 60px);
-        min-height: clamp(500px, 84vh, 720px);
+        padding: clamp(80px, 11vh, 105px) 0 clamp(40px, 5vh, 60px);
+        min-height: clamp(500px, 82vh, 700px);
       }
       .hero-intro-content {
-        max-width: min(530px, 47vw);
+        max-width: min(500px, 45vw);
       }
       .hero-name {
-        font-size: clamp(2.8rem, 4.6vw, 3.8rem);
+        font-size: clamp(2.7rem, 4.5vw, 3.6rem);
       }
       .framer-page-card {
         flex: 0 0 clamp(580px, 62vw, 720px);
@@ -1349,7 +1128,7 @@
       }
     }
 
-    /* 3. SMALL LAPTOPS & TABLETS LANDSCAPE (861px - 1024px: iPad Pro, Surface) */
+    /* 3. SMALL LAPTOPS & TABLETS LANDSCAPE (861px - 1024px: iPad Pro landscape, Surface) */
     @media (max-width: 1024px) {
       .container {
         padding: 0 clamp(20px, 3.5vw, 32px);
@@ -1359,34 +1138,31 @@
       }
       .nav-island {
         gap: 16px;
-        padding: 6px 10px 6px 16px;
+        padding: 6px 12px 6px 18px;
       }
       .nav-links {
         gap: 14px;
         font-size: 0.82rem;
       }
       .hero-section {
-        min-height: clamp(480px, 80vh, 680px);
+        min-height: clamp(480px, 78vh, 660px);
         padding: 95px 0 45px;
       }
       .hero-intro-content {
-        max-width: min(490px, 48vw);
+        max-width: min(460px, 43vw);
       }
       .hero-name {
-        font-size: clamp(2.6rem, 4.5vw, 3.4rem);
+        font-size: clamp(2.5rem, 4.2vw, 3.2rem);
       }
       .framer-page-card {
         flex: 0 0 clamp(520px, 68vw, 660px);
       }
       .framer-card-media {
-        height: 360px;
+        height: 350px;
       }
       .enterprise-card {
         width: 190px;
         height: 80px;
-      }
-      .contact-card {
-        padding: 34px 28px;
       }
     }
 
@@ -1394,20 +1170,20 @@
     @media (max-width: 860px) {
       .hero-section {
         min-height: auto;
-        padding: 105px 0 50px;
+        padding: 105px 0 420px;
         display: block;
       }
       .hero-grid {
         display: block;
       }
       .hero-intro-content {
-        max-width: 100%;
+        max-width: 620px;
       }
       .hero-name {
-        font-size: clamp(2.6rem, 6.8vw, 3.6rem);
+        font-size: clamp(2.4rem, 6.2vw, 3.4rem);
       }
       .hero-subname {
-        font-size: 1.45rem;
+        font-size: 1.4rem;
         margin-bottom: 20px;
       }
       .section-header {
@@ -1423,7 +1199,7 @@
         flex: 0 0 82vw;
       }
       .framer-card-media {
-        height: 320px;
+        height: 310px;
       }
       .framer-paddle {
         display: none;
@@ -1431,28 +1207,18 @@
       .framer-drag-hint {
         display: none;
       }
-      .emails-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .contact-head {
-        margin-bottom: 24px;
-      }
-      .contact-card {
-        padding: 30px 22px;
-      }
     }
 
     /* 5. UNFOLDED FOLDABLE PHONES - SQUARISH ASPECT RATIO (Aspect Ratio ~4:5 to 5:4) */
     @media (min-width: 540px) and (max-width: 920px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
       .hero-section {
-        padding: 95px 0 40px;
+        padding: 95px 0 380px;
       }
       .hero-name {
-        font-size: clamp(2.4rem, 5.5vw, 3.2rem);
+        font-size: clamp(2.3rem, 5.2vw, 3.0rem);
       }
       .framer-card-media {
-        height: 290px;
+        height: 280px;
       }
       .framer-page-card {
         flex: 0 0 76vw;
@@ -1492,9 +1258,20 @@
         max-height: 32px;
         max-width: 88px;
       }
+      .stat-line {
+        font-size: 0.76rem;
+      }
+      .stat-line .stat-sep {
+        margin: 0 10px;
+      }
+      .framer-showcase-num-deco {
+        font-size: clamp(3rem, 12vw, 4.5rem);
+        top: -12px;
+        right: 10px;
+      }
     }
 
-    /* 7. MOBILE PHONES (<= 640px: iPhone 13/14/15/16, Samsung Galaxy S22/S23/S24, Google Pixel) */
+    /* 7. MOBILE PHONES (<= 640px: iPhone 12/13/14/15/16, Samsung Galaxy S21-S24, Google Pixel) */
     @media (max-width: 640px) {
       .header-outer {
         top: max(10px, env(safe-area-inset-top));
@@ -1513,23 +1290,23 @@
       .nav-brand {
         font-size: 0.86rem;
       }
-      .nav-cta-btn {
+      .nav-cta {
         padding: 6px 14px;
         font-size: 0.8rem;
       }
       .hero-section {
-        padding: 85px 0 35px;
+        padding: 85px 0 360px;
       }
       .hero-name {
         font-size: clamp(2.15rem, 8.5vw, 2.9rem);
         word-break: break-word;
       }
       .hero-subname {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         margin-bottom: 16px;
       }
       .hero-role {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         margin-bottom: 14px;
       }
       .hero-bio-stack {
@@ -1566,7 +1343,7 @@
         flex: 0 0 88vw;
       }
       .framer-card-media {
-        height: 250px;
+        height: 240px;
       }
       .framer-card-caption {
         padding: 12px 14px;
@@ -1584,38 +1361,28 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
-      .contact-card {
-        padding: 24px 18px;
-        border-radius: 20px;
+      .framer-page-chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 6px;
+        margin-top: 14px;
       }
-      .contact-head h2 {
-        font-size: clamp(1.7rem, 6.5vw, 2.1rem);
-        line-height: 1.15;
+      .framer-page-chips::-webkit-scrollbar {
+        display: none;
       }
-      .contact-head p {
-        font-size: 0.9rem;
+      .framer-chip-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
       }
-      .email-item {
-        padding: 13px 15px;
-        min-height: 52px;
-      }
-      .email-val {
-        font-size: 0.86rem;
-        word-break: break-all;
-      }
-      .copy-btn {
-        min-width: 44px;
-        min-height: 44px;
-      }
-      .contact-bar {
+      .stat-line {
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
-        padding-top: 18px;
+        gap: 4px;
       }
-      .phone-item {
-        min-height: 44px;
-        font-size: 0.86rem;
+      .stat-line .stat-sep {
+        display: none;
       }
       .footer-section {
         padding-bottom: max(24px, env(safe-area-inset-bottom));
@@ -1635,7 +1402,7 @@
         font-size: clamp(2.0rem, 8.8vw, 2.5rem);
       }
       .hero-subname {
-        font-size: 1.22rem;
+        font-size: 1.2rem;
       }
       .enterprise-card {
         width: 155px;
@@ -1643,13 +1410,7 @@
         padding: 8px 12px;
       }
       .framer-card-media {
-        height: 220px;
-      }
-      .contact-card {
-        padding: 20px 14px;
-      }
-      .contact-head h2 {
-        font-size: 1.62rem;
+        height: 210px;
       }
       .framer-chip-btn {
         padding: 6px 10px;
@@ -1671,18 +1432,18 @@
         max-width: 100%;
       }
       .nav-brand {
-        font-size: 0.76rem;
+        font-size: 0.78rem;
       }
-      .nav-brand-dot {
+      .beacon-dot, .beacon-ping {
         width: 6px;
         height: 6px;
       }
-      .nav-cta-btn {
+      .nav-cta {
         padding: 5px 10px;
         font-size: 0.72rem;
       }
       .hero-section {
-        padding: 75px 0 28px;
+        padding: 75px 0 320px;
       }
       .hero-name {
         font-size: 1.8rem;
@@ -1713,7 +1474,7 @@
         flex: 0 0 94vw;
       }
       .framer-card-media {
-        height: 180px;
+        height: 175px;
       }
       .framer-card-topbar {
         padding: 8px 10px;
@@ -1727,26 +1488,6 @@
       .framer-chip-btn {
         padding: 5px 8px;
         font-size: 0.68rem;
-      }
-      .contact-card {
-        padding: 16px 10px;
-      }
-      .contact-head h2 {
-        font-size: 1.45rem;
-      }
-      .email-item {
-        padding: 10px 12px;
-      }
-      .email-type {
-        font-size: 0.68rem;
-      }
-      .email-val {
-        font-size: 0.78rem;
-        word-break: break-all;
-      }
-      .copy-btn {
-        width: 36px;
-        height: 36px;
       }
       .stat-line {
         font-size: 0.74rem;
@@ -1892,37 +1633,6 @@
       background: linear-gradient(to right, transparent, var(--border), transparent);
       margin: 0;
       border: none;
-    }
-
-    /* Responsive fixes for dark enterprise section */
-    @media (max-width: 768px) {
-      .enterprise-card {
-        padding: 18px 14px;
-        min-height: 120px;
-      }
-      .stat-line {
-        font-size: 0.76rem;
-      }
-      .stat-line .stat-sep {
-        margin: 0 10px;
-      }
-      .framer-showcase-num-deco {
-        font-size: clamp(3rem, 12vw, 4.5rem);
-        top: -12px;
-        right: 10px;
-      }
-    }
-
-    @media (max-width: 640px) {
-
-      .stat-line {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-      .stat-line .stat-sep {
-        display: none;
-      }
     }
   </style>
 </head>
@@ -2382,62 +2092,7 @@
     </section>
 
 
-        <!-- ==========================================================================
-         CONTACT & INQUIRIES
-         ========================================================================== -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div class="contact-head">
-            <div class="contact-kicker">
-              <span class="contact-kicker-dot"></span>
-              <span>Inquiries &amp; Collaborations</span>
-            </div>
-            <h2>Let's build your next digital flagship.</h2>
-            <p>
-              Available for modern web applications, luxury digital monographs, and high-trust platforms. Based in Mumbai, collaborating with visionary brands worldwide.
-            </p>
-          </div>
-
-          <!-- BOTH EMAILS WITH 1-CLICK COPY -->
-          <div class="emails-grid">
-            <div class="email-item">
-              <div class="email-info">
-                <span class="email-type">Primary Email</span>
-                <a href="mailto:rohndarji@gmail.com" class="email-val" title="Send email to rohndarji@gmail.com">rohndarji@gmail.com</a>
-              </div>
-              <button class="copy-btn" onclick="copyText('rohndarji@gmail.com')" aria-label="Copy rohndarji@gmail.com to clipboard" title="Copy to clipboard">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-
-            <div class="email-item">
-              <div class="email-info">
-                <span class="email-type">Direct Alternative</span>
-                <a href="mailto:rhan199999@gmail.com" class="email-val" title="Send email to rhan199999@gmail.com">rhan199999@gmail.com</a>
-              </div>
-              <button class="copy-btn" onclick="copyText('rhan199999@gmail.com')" aria-label="Copy rhan199999@gmail.com to clipboard" title="Copy to clipboard">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="contact-bar">
-            <a href="tel:+918169078744" class="phone-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>+91 81690 78744</span>
-            </a>
-            <span class="timezone-badge">
-              <span class="pulse-dot"></span>
-              <span>Mumbai · IST (UTC+5:30)</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-<!-- ==========================================================================
+    <!-- ==========================================================================
          FOOTER
          ========================================================================== -->
     <footer class="footer-section">
@@ -2454,13 +2109,7 @@
     </footer>
   </main>
 
-  <!-- TOAST NOTIFICATION POPUP -->
-  <div class="toast-box" id="toast-notify" role="status" aria-live="polite">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-    <span id="toast-message">Email copied to clipboard</span>
-  </div>
-
-    <!-- THREE.JS WEBGL ENGINE -->
+  <!-- THREE.JS WEBGL ENGINE -->
   <script src="assets/three.min.js"></script>
 
 <script>
@@ -2609,29 +2258,79 @@
       // Device-adaptive 3D positioning: laptops, tablets, foldables, and mobile
       function updateSpherePosition() {
         const aspect = width / height;
-        if (width >= 1280) {
-          // Wide desktop & large monitors: positioned clearly on the right with generous gutter
-          group.position.set(aspect * 2.15, 0.05, 0);
-          camera.position.set(0, 0, 9.6);
-        } else if (width >= 900 && aspect > 1.15) {
-          // Standard laptops (13"-15" MacBook Air, Dell XPS, Lenovo)
-          group.position.set(aspect * 1.95, 0.02, 0);
-          camera.position.set(0, 0, 10.0);
-        } else if (width >= 600 && aspect > 0.95) {
-          // Unfolded foldable phones & squarish tablets (Galaxy Z Fold, Pixel Fold, iPad Mini)
-          group.position.set(aspect * 1.15, -0.35, 0);
-          camera.position.set(0, 0, 10.8);
-        } else if (width >= 360) {
-          // Standard mobile phones
-          group.position.set(0, -0.65, 0);
-          camera.position.set(0, 0, 11.6);
+        const introEl = hero.querySelector('.hero-intro-content');
+
+        // Check if layout is wide enough for side-by-side (desktops and standard landscape laptops)
+        const isSideBySide = (width >= 900 && aspect > 1.05);
+
+        if (isSideBySide) {
+          // Reset group scale for desktop/laptop
+          group.scale.setScalar(1.0);
+
+          if (width >= 1280) {
+            // Large monitors & wide desktops (1440px+)
+            group.position.set(aspect * 2.15, 0.05, 0);
+            camera.position.set(0, 0, 9.6);
+          } else if (width >= 1024) {
+            // Standard laptops (13"-15" MacBook Air, Pro, Dell XPS)
+            group.position.set(aspect * 2.05, 0.02, 0);
+            camera.position.set(0, 0, 10.0);
+          } else {
+            // Small laptops & landscape tablets (iPad Pro landscape 1024x768 or 960px)
+            group.position.set(aspect * 1.85, 0.0, 0);
+            camera.position.set(0, 0, 10.2);
+          }
         } else {
-          // Ultra-narrow folded cover screens (Galaxy Fold cover ~280-320px)
-          group.position.set(0, -0.55, 0);
-          camera.position.set(0, 0, 12.6);
+          // Stacked mode: Mobile phones, portrait tablets, and folded/unfolded foldables
+          // Position the 3D sphere cleanly below the intro bio text and CTA buttons
+          let camZ = 10.6;
+          let scale = 0.88;
+
+          if (width <= 340) {
+            // Folded cover screens (Galaxy Z Fold outer screen ~280-320px)
+            camZ = 12.2;
+            scale = 0.72;
+          } else if (width <= 480) {
+            // Standard mobile phones (iPhone 12/13/14/15/16, Galaxy S, Pixel)
+            camZ = 11.5;
+            scale = 0.80;
+          } else if (width <= 640) {
+            // Large mobile phones
+            camZ = 11.0;
+            scale = 0.84;
+          } else {
+            // Tablets portrait (iPad portrait 768x1024, iPad Air) & unfolded foldables
+            camZ = 10.6;
+            scale = 0.88;
+          }
+
+          camera.position.set(0, 0, camZ);
+          group.scale.setScalar(scale);
+
+          // Calculate precise vertical centering in the stage below the text
+          const heroRect = hero.getBoundingClientRect();
+          let textBottom = 480;
+          if (introEl) {
+            const introRect = introEl.getBoundingClientRect();
+            textBottom = Math.max(introRect.bottom - heroRect.top, 300);
+          }
+
+          const heroH = heroRect.height || height;
+          const openStage = Math.max(heroH - textBottom, 260);
+          const centerYPx = textBottom + (openStage * 0.5);
+
+          // Convert pixel Y into Three.js normalized device coordinates (-1 to +1)
+          const ndcY = 1.0 - (2.0 * (centerYPx / heroH));
+          const halfHeight = Math.tan((camera.fov * Math.PI) / 360) * camZ;
+          const worldY = ndcY * halfHeight;
+
+          group.position.set(0, worldY, 0);
         }
       }
       updateSpherePosition();
+      // Ensure layout shifts / webfont loadings trigger exact realignment
+      setTimeout(updateSpherePosition, 120);
+      setTimeout(updateSpherePosition, 400);
 
       let targetMorph = 0.0;
       let currentMorph = 0.0;
@@ -2651,7 +2350,7 @@
         targetMouseActive = 0.0;
       });
 
-      // Touch interaction
+      // Touch interaction with pan-y preservation
       hero.addEventListener('touchstart', (e) => {
         if (e.touches && e.touches[0]) {
           const rect = hero.getBoundingClientRect();
@@ -2720,9 +2419,10 @@
         mouseActive += (targetMouseActive - mouseActive) * 0.08;
 
         const aspect = width / height;
+        const halfHeight = Math.tan((camera.fov * Math.PI) / 360) * camera.position.z;
         // Transform mouse coordinates into 3D world space relative to the sphere group
-        const worldMouseX = mouseX * 3.976 * aspect;
-        const worldMouseY = mouseY * 3.976;
+        const worldMouseX = mouseX * halfHeight * aspect;
+        const worldMouseY = mouseY * halfHeight;
         material.uniforms.uMouse.value.set(worldMouseX - group.position.x, worldMouseY - group.position.y, 0);
         material.uniforms.uMouseActive.value = mouseActive;
 
@@ -2752,25 +2452,8 @@
     })();
 
     // --------------------------------------------------------------------------
-    let toastTimer;
-    function copyText(str) {
-      navigator.clipboard.writeText(str).then(() => {
-        const toast = document.getElementById('toast-notify');
-        const textSpan = document.getElementById('toast-message');
-        textSpan.textContent = `Copied ${str} to clipboard`;
-        toast.classList.add('active');
-
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => {
-          toast.classList.remove('active');
-        }, 2800);
-      }).catch(() => {
-        window.location.href = `mailto:${str}`;
-      });
-    }
-
-
-
+    // 2. FRAMER SHOWCASE FILMSTRIP CONTROLS
+    // --------------------------------------------------------------------------
     function scrollFramerFilmstrip(projectId, direction) {
       const strip = document.getElementById(`filmstrip-${projectId}`);
       if (!strip) return;
