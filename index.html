@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rohan Darji — Web Designer &amp; Creative Developer</title>
-  <meta name="description" content="Portfolio of Rohan Darji, Web Designer & Creative Developer based in Mumbai. Specializing in luxury real estate, architectural showcases, and high-trust digital platforms. Previously at Capgemini and Infosys, delivering for MetLife, The Hartford, and Charles Schwab.">
+  <title>Rohan Darji — Designer &amp; Developer</title>
+  <meta name="description" content="Portfolio of Rohan Darji (रोहन दर्जी), Designer & Developer based in Mumbai. Designing and building fast, thoughtful web products and enterprise platforms for Charles Schwab, MetLife, The Hartford, Capgemini, and Infosys.">
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    /* ==========================================================================
+  <style>    /* ==========================================================================
        ARCHITECTURAL WHITE THEME (BORN DIGITAL & MLA ARCHITECTURE)
        ========================================================================== */
     :root {
@@ -34,6 +33,15 @@
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-serif: 'Instrument Serif', Georgia, serif;
       --font-mono: 'JetBrains Mono', monospace;
+
+      /* Dark section palette */
+      --dark-bg: #0a0a0c;
+      --dark-surface: #141418;
+      --dark-card: rgba(255, 255, 255, 0.05);
+      --dark-card-hover: rgba(255, 255, 255, 0.09);
+      --dark-border: rgba(255, 255, 255, 0.08);
+      --dark-text: #f1f1f4;
+      --dark-text-muted: #9ca3af;
     }
 
     * {
@@ -191,19 +199,38 @@
     }
 
     /* ==========================================================================
-       HERO SECTION WITH BORN DIGITAL INTERACTIVE CANVAS CIRCLE
+       HERO SECTION - EDITORIAL DESIGN
        ========================================================================== */
     .hero-section {
-      padding: clamp(60px, 11vh, 110px) 0 clamp(40px, 6vh, 60px);
+      padding: clamp(70px, 12vh, 120px) 0 clamp(50px, 7vh, 70px);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      min-height: clamp(520px, 86vh, 780px);
+      display: flex;
+      align-items: center;
+      background: linear-gradient(168deg, #fffbf5 0%, #ffffff 38%, #f8f6f3 100%);
+    }
+
+    /* FULL-BLEED VIEWPORT STAGE: NO BORDERS, NO CLIPPING */
+    .hero-globe-stage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: visible;
+    }
+
+    #sphere-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
-      align-items: center;
+      display: block;
       position: relative;
       z-index: 2;
     }
@@ -239,32 +266,72 @@
       border: 0;
     }
 
-    .hero-lead {
-      font-size: clamp(1.4rem, 2.4vw, 1.85rem);
-      font-weight: 500;
-      line-height: 1.35;
-      letter-spacing: -0.015em;
-      color: var(--text);
-      margin-bottom: 18px;
-      max-width: 640px;
+    /* JIACHENG YANG EDITORIAL INTRO STYLES */
+    .hero-intro-content {
+      max-width: min(560px, 46vw);
     }
 
-    .hero-lead strong {
+    .hero-name {
+      font-family: var(--font-sans);
+      font-size: clamp(2.8rem, 5.2vw, 4.2rem);
       font-weight: 700;
-      color: var(--text);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #111111;
+      margin: 0 0 4px 0;
     }
 
-    .hero-bio {
-      font-size: clamp(1rem, 1.7vw, 1.14rem);
-      color: var(--text-muted);
-      line-height: 1.65;
+    .hero-subname {
+      font-family: var(--font-sans);
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 400;
+      color: #9ca3af;
+      letter-spacing: -0.01em;
       margin-bottom: 28px;
-      max-width: 640px;
+      line-height: 1.2;
     }
 
-    .hero-bio strong {
-      color: var(--text);
+    .hero-role {
+      font-size: 1.16rem;
       font-weight: 600;
+      color: #111111;
+      letter-spacing: -0.01em;
+      margin-bottom: 22px;
+    }
+
+    .hero-bio-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .hero-bio-p {
+      font-size: clamp(1.02rem, 1.3vw, 1.12rem);
+      line-height: 1.62;
+      color: #111111;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .bio-entity {
+      color: #858b94;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .bio-entity:hover {
+      color: var(--accent);
+    }
+
+    .hero-mantra {
+      font-size: clamp(1.02rem, 1.3vw, 1.12rem);
+      line-height: 1.45;
+      color: #111111;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 6px;
     }
 
     .hero-actions {
@@ -349,43 +416,23 @@
       opacity: 0.7;
     }
 
-    /* BORN DIGITAL INTERACTIVE CANVAS GLOBE WRAPPER */
-    .globe-canvas-wrapper {
-      position: relative;
-      width: 100%;
-      height: clamp(340px, 42vw, 440px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #globe-canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-      cursor: grab;
-    }
-
-    #globe-canvas:active {
-      cursor: grabbing;
-    }
 
 
     /* ==========================================================================
        WORKED WITH TOP MNCS & GLOBAL ENTERPRISES
        ========================================================================== */
     .enterprise-section {
-      padding: 56px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--bg-surface);
+      padding: 64px 0;
+      border: none;
+      background: var(--dark-bg);
+      color: var(--dark-text);
     }
 
     .enterprise-header {
-      margin-bottom: 32px;
+      margin-bottom: 40px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
     .enterprise-pill {
@@ -397,61 +444,124 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--accent);
+      color: var(--accent-light);
     }
 
     .enterprise-pill-dot {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 8px rgba(10, 37, 64, 0.4);
+      background: var(--accent-light);
+      box-shadow: 0 0 10px rgba(217, 119, 6, 0.5);
     }
 
     .enterprise-title {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      font-weight: 600;
-      letter-spacing: -0.025em;
-      color: var(--text);
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--dark-text);
       margin: 0;
-      line-height: 1.2;
+      line-height: 1.15;
     }
 
-    .enterprise-subtitle {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      margin: 0;
-      max-width: 640px;
-      line-height: 1.5;
+    /* ENTERPRISE HORIZONTAL MARQUEE */
+    .enterprise-marquee {
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      overflow: hidden;
+      padding: 16px 0 28px;
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
     }
 
-    .enterprise-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
+    .enterprise-marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 20px;
+    }
+
+    .enterprise-marquee-group {
+      display: flex;
+      gap: 20px;
+      flex-shrink: 0;
+      animation: enterpriseMarqueeScroll 32s linear infinite;
+      will-change: transform;
+    }
+
+    .enterprise-marquee:hover .enterprise-marquee-group {
+      animation-play-state: paused;
+    }
+
+    @keyframes enterpriseMarqueeScroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-100% - 20px));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .enterprise-marquee-group {
+        animation: none;
+      }
+      .enterprise-marquee {
+        overflow-x: auto;
+      }
     }
 
     .enterprise-card {
       background: #ffffff;
-      border: 1px solid var(--border);
-      padding: 24px 20px 20px 20px;
-      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      padding: 18px 24px;
+      border-radius: 16px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       text-align: center;
-      gap: 18px;
-      min-height: 140px;
+      width: 230px;
+      height: 92px;
+      flex-shrink: 0;
       transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38), 0 2px 6px rgba(0, 0, 0, 0.12);
+      cursor: default;
     }
 
     .enterprise-card:hover {
-      border-color: rgba(10, 37, 64, 0.2);
-      transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06);
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5), 0 0 24px rgba(255, 255, 255, 0.3);
+    }
+
+    .enterprise-card[title="Capgemini"]:hover {
+      border-color: #12abdb;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5), 0 0 28px rgba(18, 171, 219, 0.45);
+    }
+
+    .enterprise-card[title="Infosys"]:hover {
+      border-color: #007cc3;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 124, 195, 0.45);
+    }
+
+    .enterprise-card[title="Charles Schwab"]:hover {
+      border-color: #00A0DF;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 160, 223, 0.45);
+    }
+
+    .enterprise-card[title="MetLife"]:hover {
+      border-color: #99d538;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5), 0 0 28px rgba(153, 213, 56, 0.45);
+    }
+
+    .enterprise-card[title="The Hartford"]:hover {
+      border-color: #D12630;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5), 0 0 28px rgba(209, 38, 48, 0.45);
     }
 
     .enterprise-logo-box {
@@ -462,95 +572,69 @@
       width: 100%;
     }
 
+    /* ORIGINAL BRAND LOGO STYLES (Preserving authentic recognized colors) */
     .enterprise-logo {
-      max-height: 32px;
-      max-width: 135px;
+      max-height: 34px;
+      max-width: 140px;
       width: auto;
       height: auto;
       object-fit: contain;
-      filter: grayscale(100%);
-      opacity: 0.68;
-      transition: all 0.25s ease;
+      opacity: 0.96;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .enterprise-card:hover .enterprise-logo {
-      filter: none;
       opacity: 1;
+      transform: scale(1.06);
     }
 
     .capgemini-logo {
-      max-height: 30px;
-      max-width: 130px;
+      max-height: 32px;
+      max-width: 135px;
     }
 
     .infosys-logo {
-      max-height: 24px;
-      max-width: 105px;
+      max-height: 25px;
+      max-width: 110px;
     }
 
     .enterprise-brand-lockup {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .enterprise-brand-lockup .schwab-icon {
       width: 28px;
       height: 28px;
-      border-radius: 4px;
-      filter: grayscale(100%);
-      opacity: 0.75;
-      transition: all 0.25s ease;
-    }
-
-    .enterprise-card:hover .enterprise-brand-lockup .schwab-icon {
-      filter: none;
-      opacity: 1;
+      object-fit: contain;
     }
 
     .enterprise-brand-lockup .brand-name {
-      font-family: var(--font-display);
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #111111;
       letter-spacing: -0.01em;
       white-space: nowrap;
     }
 
     .metlife-logo {
-      max-height: 26px;
+      max-height: 28px;
       max-width: 120px;
     }
 
     .hartford-logo {
       max-height: 44px;
-      max-width: 80px;
+      max-width: 115px;
     }
 
-    .enterprise-card-info {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      align-items: center;
-    }
-
-    .enterprise-company {
-      display: none;
-    }
-
-    .enterprise-tag {
-      font-family: var(--font-mono);
-      font-size: 0.69rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-      letter-spacing: 0.02em;
-    }
-
-    /* ==========================================================================
+/* ==========================================================================
        SELECTED REAL ESTATE WORK (MLA ARCHITECTURE & CORDA ARENA STYLE)
        ========================================================================== */
     .work-section {
-      padding: 56px 0 20px;
+      padding: 72px 0 20px;
+      border-top: 3px solid var(--accent);
     }
 
     .section-header {
@@ -989,8 +1073,19 @@
     }
 
     /* ==========================================================================
-       CONTACT & FOOTER (DUAL EMAIL INTEGRATION)
+       FOOTER
        ========================================================================== */
+    .footer-section {
+      padding: 36px 0 44px;
+      border-top: none;
+      background: var(--dark-bg);
+      color: var(--dark-text-muted);
+    }
+
+    .footer-note {
+      color: var(--dark-text-muted) !important;
+    }
+
     .contact-section {
       padding: 24px 0 48px;
       border-top: 1px solid var(--border);
@@ -1159,12 +1254,29 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 36px;
+      margin-top: 0;
       font-size: 0.78rem;
       font-family: var(--font-mono);
       color: var(--text-dim);
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
+    }
+
+    .footer-email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-light);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      transition: all 0.2s ease;
+    }
+
+    .footer-email-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+      transform: translateY(-1px);
     }
 
     /* TOAST NOTIFICATION */
@@ -1221,9 +1333,9 @@
         grid-template-columns: 1fr;
         gap: 36px;
       }
-      .globe-canvas-wrapper {
-        height: 320px;
-        max-width: 440px;
+      .hero-circle-wrapper {
+        height: 360px;
+        max-width: 100%;
         margin: 0 auto;
       }
       .section-header {
@@ -1264,13 +1376,37 @@
       .framer-drag-hint {
         display: none;
       }
-      .enterprise-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+      .enterprise-marquee {
+        padding: 12px 0 20px;
       }
       .enterprise-card {
-        padding: 18px 14px;
-        min-height: 120px;
+        width: 185px;
+        height: 78px;
+        padding: 12px 16px;
+        border-radius: 13px;
+      }
+      .capgemini-logo {
+        max-height: 25px;
+        max-width: 115px;
+      }
+      .infosys-logo {
+        max-height: 21px;
+        max-width: 95px;
+      }
+      .enterprise-brand-lockup .schwab-icon {
+        width: 24px;
+        height: 24px;
+      }
+      .enterprise-brand-lockup .brand-name {
+        font-size: 0.84rem;
+      }
+      .metlife-logo {
+        max-height: 23px;
+        max-width: 100px;
+      }
+      .hartford-logo {
+        max-height: 36px;
+        max-width: 95px;
       }
       .contact-bar {
         padding-top: 20px;
@@ -1293,8 +1429,12 @@
       .nav-links {
         display: none;
       }
-      .hero-lead {
-        font-size: clamp(1.5rem, 5vw, 1.9rem);
+      .hero-name {
+        font-size: clamp(2.2rem, 8vw, 2.9rem);
+      }
+      .hero-subname {
+        font-size: 1.35rem;
+        margin-bottom: 20px;
       }
       .hero-actions {
         flex-direction: column;
@@ -1374,8 +1514,10 @@
 
     /* 5. ULTRA-COMPACT PHONES (<= 380px) */
     @media (max-width: 380px) {
-      .enterprise-grid {
-        grid-template-columns: 1fr;
+      .enterprise-card {
+        width: 165px;
+        height: 72px;
+        padding: 10px 14px;
       }
       .contact-card {
         padding: 18px 12px;
@@ -1388,11 +1530,189 @@
         font-size: 1.65rem;
       }
     }
+
+    /* ==========================================================================
+       STAT LINE (SCANNABLE HORIZONTAL FACTS)
+       ========================================================================== */
+    .stat-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+    }
+
+    .stat-line .stat-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 0;
+      white-space: nowrap;
+    }
+
+    .stat-line .stat-sep {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--text-dim);
+      margin: 0 14px;
+      flex-shrink: 0;
+    }
+
+    .stat-line .stat-value {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ==========================================================================
+       OVERSIZED PROJECT NUMBER
+       ========================================================================== */
+    .framer-project-num {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(180, 83, 9, 0.08);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(180, 83, 9, 0.18);
+    }
+
+    .framer-showcase-num-deco {
+      font-family: var(--font-serif);
+      font-size: clamp(4rem, 8vw, 7rem);
+      font-weight: 400;
+      color: rgba(180, 83, 9, 0.07);
+      line-height: 1;
+      position: absolute;
+      top: -20px;
+      right: 20px;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .framer-showcase {
+      position: relative;
+    }
+
+    /* ==========================================================================
+       SCROLL-REVEAL ANIMATIONS
+       ========================================================================== */
+    @keyframes revealUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes revealScale {
+      from {
+        opacity: 0;
+        transform: scale(0.96) translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.96) translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-scale.is-visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    /* Stagger children */
+    .stagger-children .enterprise-card {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .stagger-children.is-visible .enterprise-card:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+    .stagger-children.is-visible .enterprise-card:nth-child(2) { transition-delay: 80ms; opacity: 1; transform: translateY(0); }
+    .stagger-children.is-visible .enterprise-card:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+    .stagger-children.is-visible .enterprise-card:nth-child(4) { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+    .stagger-children.is-visible .enterprise-card:nth-child(5) { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
+
+    /* ==========================================================================
+       SECTION DIVIDER
+       ========================================================================== */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+      margin: 0;
+      border: none;
+    }
+
+    /* Responsive fixes for dark enterprise section */
+    @media (max-width: 768px) {
+      .enterprise-card {
+        padding: 18px 14px;
+        min-height: 120px;
+      }
+      .stat-line {
+        font-size: 0.76rem;
+      }
+      .stat-line .stat-sep {
+        margin: 0 10px;
+      }
+      .framer-showcase-num-deco {
+        font-size: clamp(3rem, 12vw, 4.5rem);
+        top: -12px;
+        right: 10px;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      .stat-line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .stat-line .stat-sep {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- ==========================================================================
+       MINIMAL FLOATING ISLAND HEADER
+       ========================================================================== -->
+    <!-- ==========================================================================
+       MINIMAL FLOATING ISLAND HEADER
+       ========================================================================== -->
+    <!-- ==========================================================================
        MINIMAL FLOATING ISLAND HEADER
        ========================================================================== -->
   <header class="header-outer">
@@ -1408,10 +1728,9 @@
       <div class="nav-links">
         <a href="#work">Work</a>
         <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
       </div>
 
-      <a href="#contact" class="nav-cta">
+      <a href="mailto:rhan199999@gmail.com?subject=Inquiry%20from%20Portfolio%20-%20Let's%20Talk" class="nav-cta" title="Email Rohan Darji">
         <span>Let's Talk</span>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M17 17V7H7"/></svg>
       </a>
@@ -1420,57 +1739,44 @@
 
   <main>
     <!-- ==========================================================================
-         HERO SECTION WITH BORN DIGITAL INTERACTIVE CANVAS CIRCLE
+         HERO SECTION - EDITORIAL DESIGN
          ========================================================================== -->
-    <section class="hero-section">
-      <div class="container">
+    <section class="hero-section" id="hero">
+      <!-- FULL-BLEED 3D PARTICLE SPHERE STAGE: DISPERSES ACROSS THE ENTIRE SCREEN -->
+      <div class="hero-globe-stage" id="sphere-canvas-wrap" aria-hidden="true">
+        <canvas id="sphere-canvas"></canvas>
+      </div>
+
+      <div class="container" style="position: relative; z-index: 2; width: 100%;">
         <div class="hero-grid">
-          <div>
-            <div class="hero-meta-kicker">
-              <span>Web Designer &amp; Creative Developer</span>
-              <span>·</span>
-              <span class="accent-txt">Mumbai, India</span>
+          <div class="hero-intro-content">
+            <h1 class="hero-name">Rohan Darji</h1>
+            <div class="hero-subname">रोहन दर्जी</div>
+
+            <div class="hero-role">Designer &amp; Developer.</div>
+
+            <div class="hero-bio-stack">
+              <p class="hero-bio-p">
+                I've spent time at <span class="bio-entity">Capgemini</span> and <span class="bio-entity">Infosys</span>, building digital platforms for enterprise leaders including <span class="bio-entity">Charles Schwab</span>, <span class="bio-entity">MetLife</span>, and <span class="bio-entity">The Hartford</span>.
+              </p>
+
+              <p class="hero-bio-p">
+                Currently focused on designing and building modern web applications, interactive interfaces, and high-performance digital experiences from Mumbai.
+              </p>
+
+              <div class="hero-mantra">
+                <div>Thoughtful design.</div>
+                <div>Clean execution.</div>
+              </div>
             </div>
-
-            <h1 class="sr-only">Rohan Darji — Web Designer &amp; Creative Developer</h1>
-
-            <p class="hero-lead">
-              I'm <strong>Rohan Darji</strong> — web designer and creative developer based in Mumbai.
-            </p>
-
-            <p class="hero-bio">
-              I specialize in crafting bespoke web design and digital experiences for luxury real estate agencies, architectural developments, and high-trust digital products.
-            </p>
-            <p class="hero-bio" style="margin-top: -12px; margin-bottom: 30px;">
-              Backed by 5+ years of software engineering experience at top MNCs including <strong>Capgemini</strong> and <strong>Infosys</strong>, I have built and delivered digital platforms for global enterprise clients including <strong>MetLife</strong>, <strong>The Hartford</strong>, and <strong>Charles Schwab</strong>.
-            </p>
 
             <div class="hero-actions">
               <a href="#work" class="btn btn-solid">
                 <span>Explore Projects</span>
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M17 17V7H7"/></svg>
               </a>
-              <a href="#contact" class="btn btn-outline">Get in Touch</a>
+              <a href="mailto:rhan199999@gmail.com?subject=Project%20Inquiry%20-%20Get%20in%20Touch" class="btn btn-outline" title="Email Rohan Darji">Get in Touch</a>
             </div>
-
-            <div class="hero-contact-strip">
-              <div class="contact-pill" onclick="copyText('rohndarji@gmail.com')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>rohndarji@gmail.com</span>
-              </div>
-              <div class="contact-pill" onclick="copyText('rhan199999@gmail.com')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>rhan199999@gmail.com</span>
-              </div>
-              <a href="tel:+918169078744" class="contact-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>+91 81690 78744</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="globe-canvas-wrapper">
-            <canvas id="globe-canvas"></canvas>
           </div>
         </div>
       </div>
@@ -1481,80 +1787,159 @@
          ========================================================================== -->
     <section class="enterprise-section" id="clients">
       <div class="container">
-        <div class="enterprise-header">
+        <div class="enterprise-header reveal">
           <div class="enterprise-pill">
             <span class="enterprise-pill-dot"></span>
             <span>Enterprise Pedigree</span>
           </div>
-          <h2 class="enterprise-title">Worked with Top MNCs</h2>
-          <p class="enterprise-subtitle">Engineering resilient digital platforms, cloud architectures, and scalable UI systems for global enterprise leaders</p>
+          <h2 class="enterprise-title">Trusted by Global Leaders</h2>
         </div>
+      </div>
 
-        <div class="enterprise-grid">
-          <!-- 01: Capgemini -->
-          <div class="enterprise-card">
-            <div class="enterprise-logo-box">
-              <img src="assets/capgemini.svg" alt="Capgemini" class="enterprise-logo capgemini-logo" />
-            </div>
-            <div class="enterprise-card-info">
-              <span class="enterprise-tag">Global Consulting &amp; Cloud Engineering</span>
-            </div>
-          </div>
-
-          <!-- 02: Infosys -->
-          <div class="enterprise-card">
-            <div class="enterprise-logo-box">
-              <img src="assets/infosys.svg" alt="Infosys" class="enterprise-logo infosys-logo" />
-            </div>
-            <div class="enterprise-card-info">
-              <span class="enterprise-tag">Next-Gen Enterprise Digital Platforms</span>
-            </div>
-          </div>
-
-          <!-- 03: Charles Schwab -->
-          <div class="enterprise-card">
-            <div class="enterprise-logo-box">
-              <div class="enterprise-brand-lockup">
-                <img src="assets/schwab.svg" alt="Charles Schwab" class="schwab-icon" />
-                <span class="brand-name">Charles Schwab</span>
+      <!-- HORIZONTAL MOVING MARQUEE (Continuous 60fps infinite ticker) -->
+      <div class="enterprise-marquee">
+        <div class="enterprise-marquee-track">
+          <!-- Marquee Group 1 -->
+          <div class="enterprise-marquee-group">
+            <!-- 01: Capgemini -->
+            <div class="enterprise-card" title="Capgemini">
+              <div class="enterprise-logo-box">
+                <img src="assets/capgemini.svg" alt="Capgemini" class="enterprise-logo capgemini-logo" />
               </div>
             </div>
-            <div class="enterprise-card-info">
-              <span class="enterprise-tag">Enterprise Wealth &amp; Financial Platforms</span>
+
+            <!-- 02: Infosys -->
+            <div class="enterprise-card" title="Infosys">
+              <div class="enterprise-logo-box">
+                <img src="assets/infosys.svg" alt="Infosys" class="enterprise-logo infosys-logo" />
+              </div>
+            </div>
+
+            <!-- 03: Charles Schwab -->
+            <div class="enterprise-card" title="Charles Schwab">
+              <div class="enterprise-logo-box">
+                <div class="enterprise-brand-lockup">
+                  <img src="assets/schwab.svg" alt="Charles Schwab" class="schwab-icon" />
+                  <span class="brand-name">Charles Schwab</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 04: MetLife -->
+            <div class="enterprise-card" title="MetLife">
+              <div class="enterprise-logo-box">
+                <img src="assets/metlife.svg" alt="MetLife" class="enterprise-logo metlife-logo" />
+              </div>
+            </div>
+
+            <!-- 05: The Hartford -->
+            <div class="enterprise-card" title="The Hartford">
+              <div class="enterprise-logo-box">
+                <img src="assets/the_hartford.svg" alt="The Hartford" class="enterprise-logo hartford-logo" />
+              </div>
+            </div>
+
+            <!-- Repeat 01-05 for gapless track width across ultra-wide monitors -->
+            <div class="enterprise-card" title="Capgemini">
+              <div class="enterprise-logo-box">
+                <img src="assets/capgemini.svg" alt="Capgemini" class="enterprise-logo capgemini-logo" />
+              </div>
+            </div>
+            <div class="enterprise-card" title="Infosys">
+              <div class="enterprise-logo-box">
+                <img src="assets/infosys.svg" alt="Infosys" class="enterprise-logo infosys-logo" />
+              </div>
+            </div>
+            <div class="enterprise-card" title="Charles Schwab">
+              <div class="enterprise-logo-box">
+                <div class="enterprise-brand-lockup">
+                  <img src="assets/schwab.svg" alt="Charles Schwab" class="schwab-icon" />
+                  <span class="brand-name">Charles Schwab</span>
+                </div>
+              </div>
+            </div>
+            <div class="enterprise-card" title="MetLife">
+              <div class="enterprise-logo-box">
+                <img src="assets/metlife.svg" alt="MetLife" class="enterprise-logo metlife-logo" />
+              </div>
+            </div>
+            <div class="enterprise-card" title="The Hartford">
+              <div class="enterprise-logo-box">
+                <img src="assets/the_hartford.svg" alt="The Hartford" class="enterprise-logo hartford-logo" />
+              </div>
             </div>
           </div>
 
-          <!-- 04: MetLife -->
-          <div class="enterprise-card">
-            <div class="enterprise-logo-box">
-              <img src="assets/metlife.svg" alt="MetLife" class="enterprise-logo metlife-logo" />
+          <!-- Marquee Group 2 (Exact duplicate for seamless infinite loop) -->
+          <div class="enterprise-marquee-group" aria-hidden="true">
+            <div class="enterprise-card" title="Capgemini">
+              <div class="enterprise-logo-box">
+                <img src="assets/capgemini.svg" alt="Capgemini" class="enterprise-logo capgemini-logo" />
+              </div>
             </div>
-            <div class="enterprise-card-info">
-              <span class="enterprise-tag">Global Digital Solutions &amp; Web Apps</span>
+            <div class="enterprise-card" title="Infosys">
+              <div class="enterprise-logo-box">
+                <img src="assets/infosys.svg" alt="Infosys" class="enterprise-logo infosys-logo" />
+              </div>
             </div>
-          </div>
+            <div class="enterprise-card" title="Charles Schwab">
+              <div class="enterprise-logo-box">
+                <div class="enterprise-brand-lockup">
+                  <img src="assets/schwab.svg" alt="Charles Schwab" class="schwab-icon" />
+                  <span class="brand-name">Charles Schwab</span>
+                </div>
+              </div>
+            </div>
+            <div class="enterprise-card" title="MetLife">
+              <div class="enterprise-logo-box">
+                <img src="assets/metlife.svg" alt="MetLife" class="enterprise-logo metlife-logo" />
+              </div>
+            </div>
+            <div class="enterprise-card" title="The Hartford">
+              <div class="enterprise-logo-box">
+                <img src="assets/the_hartford.svg" alt="The Hartford" class="enterprise-logo hartford-logo" />
+              </div>
+            </div>
 
-          <!-- 05: The Hartford -->
-          <div class="enterprise-card">
-            <div class="enterprise-logo-box">
-              <img src="assets/the_hartford.svg" alt="The Hartford" class="enterprise-logo hartford-logo" />
+            <div class="enterprise-card" title="Capgemini">
+              <div class="enterprise-logo-box">
+                <img src="assets/capgemini.svg" alt="Capgemini" class="enterprise-logo capgemini-logo" />
+              </div>
             </div>
-            <div class="enterprise-card-info">
-              <span class="enterprise-tag">Enterprise Workflows &amp; UI Architecture</span>
+            <div class="enterprise-card" title="Infosys">
+              <div class="enterprise-logo-box">
+                <img src="assets/infosys.svg" alt="Infosys" class="enterprise-logo infosys-logo" />
+              </div>
+            </div>
+            <div class="enterprise-card" title="Charles Schwab">
+              <div class="enterprise-logo-box">
+                <div class="enterprise-brand-lockup">
+                  <img src="assets/schwab.svg" alt="Charles Schwab" class="schwab-icon" />
+                  <span class="brand-name">Charles Schwab</span>
+                </div>
+              </div>
+            </div>
+            <div class="enterprise-card" title="MetLife">
+              <div class="enterprise-logo-box">
+                <img src="assets/metlife.svg" alt="MetLife" class="enterprise-logo metlife-logo" />
+              </div>
+            </div>
+            <div class="enterprise-card" title="The Hartford">
+              <div class="enterprise-logo-box">
+                <img src="assets/the_hartford.svg" alt="The Hartford" class="enterprise-logo hartford-logo" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         PROJECT SHOWCASE (FRAMER-STYLE INTERACTIVE CANVAS)
-         ========================================================================== -->
     <section class="work-section" id="work">
       <div class="container">
 
         <!-- FRAMER-STYLE SHOWCASE 01: URBN Estate Europe -->
-        <div class="framer-showcase" id="showcase-urbn">
+        <div class="framer-showcase reveal-scale" id="showcase-urbn">
+          <span class="framer-showcase-num-deco">01</span>
           <!-- CANVAS TOOLBAR -->
           <div class="framer-canvas-header">
             <div class="framer-project-meta">
@@ -1646,32 +2031,25 @@
                 <button class="framer-chip-btn" onclick="goToFramerCard('urbn', 1)">02 / Verified Passports</button>
                 <button class="framer-chip-btn" onclick="goToFramerCard('urbn', 2)">03 / Notary Engine</button>
               </div>
-              <div class="framer-drag-hint">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                <span>Drag horizontally or click chips</span>
-              </div>
             </div>
 
           </div>
 
-          <!-- EDITORIAL CASE DOSSIER -->
-          <div class="project-body" style="padding: 28px 4px 0 4px;">
-            <div class="project-tags" style="margin-bottom: 16px;">
-              <span class="tag-pill">Paris · Munich · Zurich</span>
-              <span class="tag-pill">DPE / EPC Ratings</span>
-              <span class="tag-pill">Multi-Currency (EUR/CHF)</span>
-              <span class="tag-pill">Interactive Cost Engine</span>
-            </div>
-
-            <p class="project-summary">
-              Cross-border luxury real estate platform built to give international buyers total transparency before speaking to an agent. Features verified DPE/EPC energy ratings, dynamic notary acquisition cost calculators, and live multi-currency conversions.
-            </p>
-
+          <!-- SCANNABLE STAT LINE -->
+          <div class="stat-line" style="padding: 20px 4px 0 4px;">
+            <span class="stat-item"><span class="stat-value">4 Cities</span></span>
+            <span class="stat-sep"></span>
+            <span class="stat-item"><span class="stat-value">3 Currencies</span></span>
+            <span class="stat-sep"></span>
+            <span class="stat-item">DPE / EPC Certified</span>
+            <span class="stat-sep"></span>
+            <span class="stat-item">Next.js 14 · Vercel</span>
           </div>
         </div>
 
         <!-- FRAMER-STYLE SHOWCASE 02: WNS Estates -->
-        <div class="framer-showcase" id="showcase-wns">
+        <div class="framer-showcase reveal-scale" id="showcase-wns">
+          <span class="framer-showcase-num-deco">02</span>
           <!-- CANVAS TOOLBAR -->
           <div class="framer-canvas-header">
             <div class="framer-project-meta">
@@ -1763,35 +2141,27 @@
                 <button class="framer-chip-btn" onclick="goToFramerCard('wns', 1)">02 / Paris 8e Monograph</button>
                 <button class="framer-chip-btn" onclick="goToFramerCard('wns', 2)">03 / Private Advisory</button>
               </div>
-              <div class="framer-drag-hint">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                <span>Drag horizontally or click chips</span>
-              </div>
             </div>
 
           </div>
 
-          <!-- EDITORIAL CASE DOSSIER -->
-          <div class="project-body" style="padding: 28px 4px 0 4px;">
-            <div class="project-tags" style="margin-bottom: 16px;">
-              <span class="tag-pill">Paris 8e &amp; Cap d'Antibes</span>
-              <span class="tag-pill">Editorial Monograph</span>
-              <span class="tag-pill">Spatial Layout</span>
-              <span class="tag-pill">Private Concierge</span>
-            </div>
-
-            <p class="project-summary">
-              An editorial digital showcase designed for a private Parisian consultancy representing eight-figure Haussmannian residences and Cap d'Antibes waterfront estates. Replaces loud real estate commercial tropes with generous architectural pacing and serif dignity.
-            </p>
-
+          <!-- SCANNABLE STAT LINE -->
+          <div class="stat-line" style="padding: 20px 4px 0 4px;">
+            <span class="stat-item"><span class="stat-value">Paris 8e</span></span>
+            <span class="stat-sep"></span>
+            <span class="stat-item"><span class="stat-value">Cap d'Antibes</span></span>
+            <span class="stat-sep"></span>
+            <span class="stat-item">Editorial Monograph</span>
+            <span class="stat-sep"></span>
+            <span class="stat-item">Private Concierge</span>
           </div>
         </div>
       </div>
     </section>
 
 
-    <!-- ==========================================================================
-         CONTACT & FOOTER (DUAL EMAIL INTEGRATION)
+        <!-- ==========================================================================
+         CONTACT & INQUIRIES
          ========================================================================== -->
     <section class="contact-section" id="contact">
       <div class="container">
@@ -1803,7 +2173,7 @@
             </div>
             <h2>Let's build your next digital flagship.</h2>
             <p>
-              Available for luxury real estate developments, boutique architectural showcases, and high-trust digital platforms. Based in Mumbai, collaborating with visionary brands worldwide.
+              Available for modern web applications, luxury digital monographs, and high-trust platforms. Based in Mumbai, collaborating with visionary brands worldwide.
             </p>
           </div>
 
@@ -1832,23 +2202,34 @@
 
           <div class="contact-bar">
             <a href="tel:+918169078744" class="phone-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span>+91 81690 78744</span>
             </a>
-
-            <div class="clock-item">
-              <span class="beacon-dot"></span>
-              <span>Mumbai, India</span>
-            </div>
+            <span class="timezone-badge">
+              <span class="pulse-dot"></span>
+              <span>Mumbai · IST (UTC+5:30)</span>
+            </span>
           </div>
-        </div>
-
-        <div class="footer-note">
-          <span>Rohan Darji — Web Designer &amp; Creative Developer</span>
-          <span>© 2026 Bespoke Architecture</span>
         </div>
       </div>
     </section>
+
+
+<!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-note">
+          <span>Rohan Darji — Web Designer &amp; Creative Developer</span>
+          <a href="mailto:rhan199999@gmail.com?subject=Project%20Inquiry%20-%20Let's%20Talk" class="footer-email-link" title="Send email to rhan199999@gmail.com">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>rhan199999@gmail.com</span>
+          </a>
+          <span>© 2026 Bespoke Architecture</span>
+        </div>
+      </div>
+    </footer>
   </main>
 
   <!-- TOAST NOTIFICATION POPUP -->
@@ -1857,303 +2238,282 @@
     <span id="toast-message">Email copied to clipboard</span>
   </div>
 
-  <!-- THREE.JS WEBGL ENGINE -->
+    <!-- THREE.JS WEBGL ENGINE -->
   <script src="assets/three.min.js"></script>
 
-  <!-- ==========================================================================
-       JAVASCRIPT LOGIC
-       1. BORN DIGITAL INTERACTIVE 3D PARTICLE SPHERE (MOUSE RAY REPULSION & SPRING)
-       2. EXPANDABLE CASE ACCORDION
-       3. CLIPBOARD COPY
-       ========================================================================== -->
-  <script>
+<script>
     // --------------------------------------------------------------------------
-    // 1. EXACT BORN DIGITAL 3D PARTICLE SPHERE (MOUSE REPULSION & ELASTIC SPRING)
+    // BORN DIGITAL 3D PARAMETRIC DNA PARTICLE WAVE
     // --------------------------------------------------------------------------
-    (function initBornDigitalParticleSphere() {
-      const canvas = document.getElementById('globe-canvas');
-      if (!canvas) return;
+    // BORN DIGITAL INTERACTIVE 3D PARTICLE SPHERE WITH SCROLL SPLIT & DISPERSAL
+    // --------------------------------------------------------------------------
+    // BORN DIGITAL INTERACTIVE 3D PARTICLE SPHERE (FULL-BLEED SCROLL DISPERSAL)
+    // --------------------------------------------------------------------------
+    (function initBornDigitalCircleSphere() {
+      const hero = document.getElementById('hero');
+      const canvas = document.getElementById('sphere-canvas');
+      if (!canvas || !hero || typeof THREE === 'undefined') return;
 
-      if (typeof THREE === 'undefined') {
-        console.warn('THREE not loaded');
-        return;
-      }
+      let width = hero.clientWidth || window.innerWidth;
+      let height = hero.clientHeight || window.innerHeight;
 
-      const wrapper = canvas.parentElement;
-      let width = wrapper.clientWidth || 440;
-      let height = wrapper.clientHeight || 440;
-
-      // Scene, Camera, High-Performance WebGL Renderer
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(48, width / height, 0.1, 100);
-      camera.position.set(0, 0, 8.2);
+      const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+      camera.position.set(0, 0, 9.6);
 
       const renderer = new THREE.WebGLRenderer({
         canvas: canvas,
-        alpha: true,
         antialias: true,
+        alpha: true,
         powerPreference: 'high-performance'
       });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-      renderer.setSize(width, height, false);
+      renderer.setSize(width, height);
 
-      // Particle Geometry & Arrays (Fibonacci Sphere Distribution)
-      const count = 2800;
-      const sphereRadius = 2.65;
-      const phiGolden = (1 + Math.sqrt(5)) / 2;
+      // 8,000 Fibonacci sphere particles
+      const count = 8000;
+      const radius = 2.3;
+      const phi = (1 + Math.sqrt(5)) / 2;
 
-      const positions = new Float32Array(count * 3);
-      const original = new Float32Array(count * 3);
-      const velocities = new Float32Array(count * 3);
-      const sizes = new Float32Array(count);
+      const spherePositions = new Float32Array(count * 3);
+      const starPositions = new Float32Array(count * 3);
+      const normals = new Float32Array(count * 3);
 
       for (let i = 0; i < count; i++) {
-        const theta = 2 * Math.PI * i / phiGolden;
-        const y = 1 - (i / (count - 1)) * 2;
-        const r = Math.sqrt(Math.max(0, 1 - y * y));
-        const x = Math.cos(theta) * r * sphereRadius;
-        const py = y * sphereRadius;
-        const z = Math.sin(theta) * r * sphereRadius;
+        // Fibonacci Golden Spiral distribution on sphere
+        const theta = 2 * Math.PI * i / phi;
+        const phiAngle = Math.acos(1 - 2 * (i + 0.5) / count);
 
-        positions[i * 3]     = x;
-        positions[i * 3 + 1] = py;
-        positions[i * 3 + 2] = z;
+        const nx = Math.sin(phiAngle) * Math.cos(theta);
+        const ny = Math.sin(phiAngle) * Math.sin(theta);
+        const nz = Math.cos(phiAngle);
 
-        original[i * 3]     = x;
-        original[i * 3 + 1] = py;
-        original[i * 3 + 2] = z;
+        normals[i * 3] = nx;
+        normals[i * 3 + 1] = ny;
+        normals[i * 3 + 2] = nz;
 
-        velocities[i * 3]     = 0;
-        velocities[i * 3 + 1] = 0;
-        velocities[i * 3 + 2] = 0;
+        spherePositions[i * 3] = nx * radius;
+        spherePositions[i * 3 + 1] = ny * radius;
+        spherePositions[i * 3 + 2] = nz * radius;
 
-        sizes[i] = Math.random() * 0.8 + 1.2;
+        // Dispersed / split-out 3D starfield positions across the ENTIRE viewport width & height
+        const spreadX = 26.0;
+        const spreadY = 18.0;
+        const spreadZ = 22.0;
+
+        starPositions[i * 3] = (Math.random() - 0.5) * spreadX;
+        starPositions[i * 3 + 1] = (Math.random() - 0.5) * spreadY;
+        starPositions[i * 3 + 2] = (Math.random() - 0.5) * spreadZ;
       }
 
       const geometry = new THREE.BufferGeometry();
-      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      geometry.setAttribute('aSize', new THREE.BufferAttribute(sizes, 1));
+      geometry.setAttribute('position', new THREE.BufferAttribute(spherePositions, 3));
+      geometry.setAttribute('aStarPosition', new THREE.BufferAttribute(starPositions, 3));
+      geometry.setAttribute('normal', new THREE.BufferAttribute(normals, 3));
 
-      // Circular Antialiased Dot Shader (Born Digital Palette)
+      // GPU Shader Material: silky-smooth 60-120fps morphing without any bounding box
       const material = new THREE.ShaderMaterial({
+        transparent: true,
         uniforms: {
-          uColor: { value: new THREE.Color(0x0f172a) },
-          uPixelRatio: { value: Math.min(window.devicePixelRatio || 1, 2) }
+          uMorph: { value: 0.0 },
+          uTime: { value: 0.0 },
+          uPointSize: { value: 3.4 },
+          uMouse: { value: new THREE.Vector3(999, 999, 0) },
+          uMouseActive: { value: 0.0 }
         },
         vertexShader: `
-          attribute float aSize;
-          uniform float uPixelRatio;
+          attribute vec3 aStarPosition;
+          uniform float uMorph;
+          uniform float uTime;
+          uniform float uPointSize;
+          uniform vec3 uMouse;
+          uniform float uMouseActive;
+
           varying float vDepth;
+          varying float vMorph;
+
           void main() {
-            vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-            gl_PointSize = aSize * uPixelRatio * (28.0 / -mvPosition.z);
+            vMorph = uMorph;
+
+            // Smooth cubic hermite interpolation from solid sphere to dispersed starfield
+            float t = smoothstep(0.0, 1.0, uMorph);
+            vec3 pos = mix(position, aStarPosition, t);
+
+            // Subtle organic breathing oscillation on the sphere
+            float breath = sin(uTime * 1.4 + position.y * 2.5) * 0.06 * (1.0 - t * 0.7);
+            pos += normal * breath;
+
+            // Interactive mouse repulsion with quadratic spring falloff
+            vec3 toMouse = pos - uMouse;
+            float dist = length(toMouse);
+            float mouseRadius = 2.0;
+            if (uMouseActive > 0.05 && dist < mouseRadius && dist > 0.01) {
+              float repel = pow(1.0 - dist / mouseRadius, 2.0) * 0.85 * uMouseActive;
+              pos += normalize(toMouse) * repel;
+            }
+
+            vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
             gl_Position = projectionMatrix * mvPosition;
+
             vDepth = -mvPosition.z;
+            gl_PointSize = clamp((uPointSize * 2.8) / (vDepth * 0.3), 1.0, 24.0);
           }
         `,
         fragmentShader: `
-          uniform vec3 uColor;
+          uniform float uMorph;
           varying float vDepth;
+          varying float vMorph;
+
           void main() {
-            float dist = distance(gl_PointCoord, vec2(0.5));
-            if (dist > 0.5) discard;
-            float alpha = smoothstep(0.5, 0.38, dist);
-            float depthFade = clamp(1.0 - (vDepth - 5.5) / 5.5, 0.22, 1.0);
-            gl_FragColor = vec4(uColor, alpha * depthFade);
+            // Anti-aliased circular particle shape
+            float d = distance(gl_PointCoord, vec2(0.5));
+            if (d > 0.5) discard;
+
+            float alpha = smoothstep(0.5, 0.44, d);
+            // Slight opacity attenuation as particles scatter into space
+            alpha *= clamp(0.96 - vMorph * 0.32, 0.45, 0.96);
+
+            // Near-black charcoal ink (#0E0E0E) matching Born Digital
+            gl_FragColor = vec4(0.06, 0.06, 0.07, alpha);
           }
-        `,
-        transparent: true,
-        depthWrite: false
+        `
       });
 
-      const particleGroup = new THREE.Group();
       const points = new THREE.Points(geometry, material);
-      particleGroup.add(points);
-      scene.add(particleGroup);
+      const group = new THREE.Group();
+      group.add(points);
+      scene.add(group);
 
-      // Mouse & Raycasting Physics (The Born Digital Signature Move)
-      const raycaster = new THREE.Raycaster();
-      const mouse = new THREE.Vector2(-999, -999);
-      let isHovering = false;
+      // Position sphere on right half of screen on desktop, centered on mobile
+      function updateSpherePosition() {
+        const aspect = width / height;
+        if (width >= 860) {
+          // Positioned clearly on the right half with a generous gutter so it never overlaps the bio text
+          group.position.set(aspect * 2.15, 0.05, 0);
+          camera.position.set(0, 0, 9.6);
+        } else {
+          // Centered on smaller screens / mobile
+          group.position.set(0, -0.6, 0);
+          camera.position.set(0, 0, 11.5);
+        }
+      }
+      updateSpherePosition();
 
-      // Track cursor coordinates across canvas
-      canvas.addEventListener('mousemove', (e) => {
-        const rect = canvas.getBoundingClientRect();
-        mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-        mouse.y = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
-        isHovering = true;
+      let targetMorph = 0.0;
+      let currentMorph = 0.0;
+      let mouseX = 0, mouseY = 0;
+      let targetMouseX = 0, targetMouseY = 0;
+      let mouseActive = 0, targetMouseActive = 0;
+
+      // Track mouse position across entire hero section
+      hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        targetMouseX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+        targetMouseY = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
+        targetMouseActive = 1.0;
       });
 
-      canvas.addEventListener('mouseleave', () => {
-        isHovering = false;
-        mouse.set(-999, -999);
+      hero.addEventListener('mouseleave', () => {
+        targetMouseActive = 0.0;
       });
 
-      // Drag to rotate with momentum inertia
-      let isDragging = false;
-      let prevMouseX = 0;
-      let prevMouseY = 0;
-      let dragVelocityX = 0;
-      let dragVelocityY = 0;
-
-      canvas.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        prevMouseX = e.clientX;
-        prevMouseY = e.clientY;
-        dragVelocityX = 0;
-        dragVelocityY = 0;
-      });
-
-      window.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const dx = e.clientX - prevMouseX;
-        const dy = e.clientY - prevMouseY;
-        dragVelocityY = dx * 0.005;
-        dragVelocityX = dy * 0.005;
-        particleGroup.rotation.y += dragVelocityY;
-        particleGroup.rotation.x += dragVelocityX;
-        prevMouseX = e.clientX;
-        prevMouseY = e.clientY;
-      });
-
-      window.addEventListener('mouseup', () => {
-        isDragging = false;
-      });
-
-      // Touch events
-      canvas.addEventListener('touchmove', (e) => {
-        if (e.touches.length > 0) {
-          const rect = canvas.getBoundingClientRect();
-          mouse.x = ((e.touches[0].clientX - rect.left) / rect.width) * 2 - 1;
-          mouse.y = -(((e.touches[0].clientY - rect.top) / rect.height) * 2 - 1);
-          isHovering = true;
+      // Touch interaction
+      hero.addEventListener('touchstart', (e) => {
+        if (e.touches && e.touches[0]) {
+          const rect = hero.getBoundingClientRect();
+          targetMouseX = ((e.touches[0].clientX - rect.left) / rect.width) * 2 - 1;
+          targetMouseY = -(((e.touches[0].clientY - rect.top) / rect.height) * 2 - 1);
+          targetMouseActive = 1.0;
         }
       }, { passive: true });
 
-      canvas.addEventListener('touchend', () => {
-        isHovering = false;
-        mouse.set(-999, -999);
+      hero.addEventListener('touchmove', (e) => {
+        if (e.touches && e.touches[0]) {
+          const rect = hero.getBoundingClientRect();
+          targetMouseX = ((e.touches[0].clientX - rect.left) / rect.width) * 2 - 1;
+          targetMouseY = -(((e.touches[0].clientY - rect.top) / rect.height) * 2 - 1);
+          targetMouseActive = 1.0;
+        }
+      }, { passive: true });
+
+      hero.addEventListener('touchend', () => {
+        targetMouseActive = 0.0;
       });
 
-      // Resize handling
-      function handleResize() {
-        width = wrapper.clientWidth || 440;
-        height = wrapper.clientHeight || 440;
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-        renderer.setSize(width, height, false);
-      }
-      window.addEventListener('resize', handleResize);
+      // SCROLL DISPERSAL & REFORM:
+      // When scrolling down: particles disperse across the entire screen with ZERO borders
+      // When scrolling up: particles converge back into the original circular sphere
+      function updateScrollMorph() {
+        const rect = hero.getBoundingClientRect();
+        const heroHeight = rect.height || window.innerHeight;
 
-      // Animation Loop with Born Digital Ray Repulsion + Spring Physics
-      let clock = 0;
-      const mouseRadius = 1.7;
-      const mouseForce = 0.55;
+        const scrolled = -rect.top;
+        const maxScroll = heroHeight * 0.85;
+        const progress = Math.min(Math.max(scrolled / maxScroll, 0), 1);
+        targetMorph = progress;
+      }
+
+      window.addEventListener('scroll', updateScrollMorph, { passive: true });
+      updateScrollMorph();
+
+      // Intersection Observer to sleep when hero is completely scrolled away
+      let isVisible = true;
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            isVisible = entry.isIntersecting;
+          });
+        }, { threshold: 0.02 });
+        observer.observe(hero);
+      }
+
+      const clock = new THREE.Clock();
 
       function animate() {
         requestAnimationFrame(animate);
-        clock += 0.018;
+        if (!isVisible) return;
 
-        // Ambient floating motion
-        if (!isDragging) {
-          dragVelocityX *= 0.94;
-          dragVelocityY *= 0.94;
-          particleGroup.rotation.x += dragVelocityX;
-          particleGroup.rotation.y += dragVelocityY + 0.0035;
-          particleGroup.position.y = Math.sin(clock * 1.2) * 0.12;
-        }
+        const elapsed = clock.getElapsedTime();
 
-        // Raycasting for mouse repulsion
-        let hasRay = false;
-        let rayOrigin = null;
-        let rayDir = null;
+        // Smooth GPU morph interpolation (60-120fps)
+        currentMorph += (targetMorph - currentMorph) * 0.065;
+        material.uniforms.uMorph.value = currentMorph;
+        material.uniforms.uTime.value = elapsed;
 
-        if (isHovering && mouse.x > -2) {
-          raycaster.setFromCamera(mouse, camera);
-          rayOrigin = raycaster.ray.origin;
-          rayDir = raycaster.ray.direction;
-          hasRay = true;
-        }
+        // Smooth physics lerping for mouse repulsion
+        mouseX += (targetMouseX - mouseX) * 0.08;
+        mouseY += (targetMouseY - mouseY) * 0.08;
+        mouseActive += (targetMouseActive - mouseActive) * 0.08;
 
-        const posArr = geometry.attributes.position.array;
-        const invMatrix = new THREE.Matrix4().copy(particleGroup.matrixWorld).invert();
+        const aspect = width / height;
+        // Transform mouse coordinates into 3D world space relative to the sphere group
+        const worldMouseX = mouseX * 3.976 * aspect;
+        const worldMouseY = mouseY * 3.976;
+        material.uniforms.uMouse.value.set(worldMouseX - group.position.x, worldMouseY - group.position.y, 0);
+        material.uniforms.uMouseActive.value = mouseActive;
 
-        let localRayOrigin, localRayDir;
-        if (hasRay) {
-          localRayOrigin = rayOrigin.clone().applyMatrix4(invMatrix);
-          localRayDir = rayDir.clone().transformDirection(invMatrix).normalize();
-        }
+        // Gentle ambient rotation and cursor parallax
+        group.rotation.y += 0.0035;
+        group.rotation.x = -mouseY * 0.18;
+        group.rotation.y += mouseX * 0.008;
 
-        for (let i = 0; i < count; i++) {
-          const idx = i * 3;
-          let px = posArr[idx];
-          let py = posArr[idx + 1];
-          let pz = posArr[idx + 2];
-
-          let fx = 0, fy = 0, fz = 0;
-
-          // Born Digital Mouse Repulsion along Ray
-          if (hasRay) {
-            const tox = px - localRayOrigin.x;
-            const toy = py - localRayOrigin.y;
-            const toz = pz - localRayOrigin.z;
-
-            const proj = tox * localRayDir.x + toy * localRayDir.y + toz * localRayDir.z;
-            const cx = localRayOrigin.x + localRayDir.x * proj;
-            const cy = localRayOrigin.y + localRayDir.y * proj;
-            const cz = localRayOrigin.z + localRayDir.z * proj;
-
-            const dx = px - cx;
-            const dy = py - cy;
-            const dz = pz - cz;
-            const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
-
-            if (dist < mouseRadius && dist > 0.001) {
-              let falloff = 1.0 - dist / mouseRadius;
-              falloff *= falloff;
-              const invD = 1.0 / dist;
-              fx += (dx * invD) * falloff * mouseForce;
-              fy += (dy * invD) * falloff * mouseForce;
-              fz += (dz * invD) * falloff * mouseForce;
-            }
-          }
-
-          // Subtle organic harmonic wave on target
-          const origX = original[idx];
-          const origY = original[idx + 1];
-          const origZ = original[idx + 2];
-
-          const wave = Math.sin(clock * 1.8 + origY * 2.2) * 0.045;
-          const targetX = origX * (1 + wave);
-          const targetY = origY * (1 + wave);
-          const targetZ = origZ * (1 + wave);
-
-          // Elastic Spring force returning to sphere (0.045 return factor)
-          fx += (targetX - px) * 0.045;
-          fy += (targetY - py) * 0.045;
-          fz += (targetZ - pz) * 0.045;
-
-          // Velocity Damping (0.82 friction)
-          velocities[idx]     = (velocities[idx] + fx) * 0.82;
-          velocities[idx + 1] = (velocities[idx + 1] + fy) * 0.82;
-          velocities[idx + 2] = (velocities[idx + 2] + fz) * 0.82;
-
-          posArr[idx]     += velocities[idx];
-          posArr[idx + 1] += velocities[idx + 1];
-          posArr[idx + 2] += velocities[idx + 2];
-        }
-
-        geometry.attributes.position.needsUpdate = true;
         renderer.render(scene, camera);
       }
-
       animate();
+
+      function onResize() {
+        width = hero.clientWidth || window.innerWidth;
+        height = hero.clientHeight || window.innerHeight;
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        updateSpherePosition();
+      }
+
+      window.addEventListener('resize', onResize);
     })();
 
-
-
-    // --------------------------------------------------------------------------
-    // 3. 1-CLICK CLIPBOARD COPY WITH ANIMATED TOAST
     // --------------------------------------------------------------------------
     let toastTimer;
     function copyText(str) {
@@ -2267,6 +2627,28 @@
         }, 60);
       }, { passive: true });
     });
+
+    // --------------------------------------------------------------------------
+    // 4. SCROLL-REVEAL INTERSECTION OBSERVER
+    // --------------------------------------------------------------------------
+    (function initScrollReveal() {
+      const revealElements = document.querySelectorAll('.reveal, .reveal-scale, .stagger-children');
+      if (!revealElements.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -60px 0px'
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+    })();
   </script>
 </body>
 </html>
